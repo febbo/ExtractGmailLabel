@@ -93,10 +93,54 @@ python extract_emails.py
 
 4. Choose a label by entering its number (e.g., type `4` for Important)
 
-5. The script will extract all emails from the selected label and save them to **newsletter_gapi.txt**
+5. Select the output format:
+
+```
+📄 Formato di output:
+--------------------------------------------------
+1. 🔤 Formato semplificato (leggibile, solo contenuto importante)
+2. 📋 Formato raw completo (tutto il contenuto email originale)
+--------------------------------------------------
+
+Scegli formato (1-2): 
+```
+
+6. The script will extract all emails from the selected label and save them to:
+   - **newsletter_simple.txt** (for simplified format)
+   - **newsletter_raw.txt** (for raw format)
+
+### 📊 Output Formats
+
+#### 🔤 Simplified Format (Recommended)
+Clean, readable format with only essential information:
+
+```
+================================================================================
+📧 EMAIL #1
+================================================================================
+📅 Data: Wed, 08 Jan 2025 10:30:00 +0100
+👤 Da: newsletter@example.com
+👥 A: your.email@gmail.com
+📝 Oggetto: Weekly Newsletter - Important Updates
+================================================================================
+
+This is the clean email content without HTML tags, headers, or technical data.
+Perfect for feeding to LLMs or reading/analyzing email content.
+
+All formatting is preserved but simplified for better readability.
+
+================================================================================
+FINE EMAIL #1
+================================================================================
+```
+
+#### 📋 Raw Format
+Complete email data including all headers, encoding, and technical information. Useful for technical analysis or debugging.
 
 ### 💡 Tips:
 - You can type `q` to cancel the operation
+- **Simplified format is recommended** for most use cases (AI analysis, reading, etc.)
+- **Raw format is useful** for technical analysis or debugging
 
 
 ## 🔒 Security Notes
